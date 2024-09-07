@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="指定暴力団電子計算組織研究会">
+    <title>EDPS</title>
+
+    <style>
+      /* Centralizing the loader container */
+      body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .loader {
+        width: fit-content;
+        font-size: 50px;
+        font-family: monospace;
+        line-height: 1.4;
+        font-weight: bold;
+        background: 
+          linear-gradient(#000 0 0) left ,
+          linear-gradient(#000 0 0) right;
+        background-repeat: no-repeat; 
+        border-right: 5px solid #0000;
+        border-left: 5px solid #0000;
+        background-origin: border-box;
+        position: relative; /* Changed from absolute to relative */
+        animation: l9-0 2s infinite;
+        transform :scale(2,2);
+      }
+  
+      .loader::before {
+        content: "Loading";
+      }
+  
+      .loader::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 22px;
+        height: 70px;
+        background: 
+         linear-gradient(90deg, #000 4px, #0000 0 calc(100% - 4px), #000 0) bottom /22px 20px,
+         linear-gradient(90deg, red 4px, #0000 0 calc(100% - 4px), red 0) bottom 10px left 0 /22px 6px,
+         linear-gradient(#000 0 0) bottom 3px left 0 /22px 8px,
+         linear-gradient(#000 0 0) bottom 0 left 50% /8px 16px;
+        background-repeat: no-repeat;
+        animation: l9-1 2s infinite;
+        transform :scale(1.3,1.3);
+      }
+  
+      @keyframes l9-0 {
+        0%, 25% {background-size: 50% 100%}
+        25.1%, 75% {background-size: 0 0, 50% 100%}
+        75.1%, 100% {background-size: 0 0, 0 0}
+      }
+  
+      @keyframes l9-1 {
+        25% {background-position: bottom, bottom 54px left 0, bottom 3px left 0, bottom 0 left 50%; left: 0}
+        25.1% {background-position: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%; left: 0}
+        50% {background-position: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%; left: calc(100% - 22px)}
+        75% {background-position: bottom, bottom 54px left 0, bottom 3px left 0, bottom 0 left 50%; left: calc(100% - 22px)}
+        75.1% {background-position: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%; left: calc(100% - 22px)}
+      }
+    </style>
+</head>
+
+  <body>
+    <div class="loader"></div>
+  </body>
+
+<script>
+// Hide the elements after 3 seconds
+setTimeout(function() {
+  health.domElement.style.display = 'none';
+  mp.domElement.style.display = 'none';
+}, 5000);
+</script>
+
+<body>
+  <div>
+    <script>
+   setTimeout(function(){
+      window.location.href = './2ndindex.html';
+        }, 6*1000);
+    </Script>
+  </div>
+</html>
