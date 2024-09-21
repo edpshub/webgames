@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* 長いページのために高さを設定 */
+    background-image: url('background.jpg'); /* 背景画像の指定 */
+    background-size: cover;
+    background-attachment: fixed; /* 背景を固定 */
+    background-position: center;
+    position: relative;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+.noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('data:image/png;base64,...') repeat; /* ノイズの画像 */
+    opacity: 0.2;
+    animation: noiseAnimation 0.2s infinite;
+}
+
+/* ノイズのアニメーション */
+@keyframes noiseAnimation {
+    0% { opacity: 0.1; transform: translate(0, 0); }
+    50% { opacity: 0.3; transform: translate(5px, 5px); }
+    100% { opacity: 0.1; transform: translate(-5px, -5px); }
+}
