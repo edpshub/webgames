@@ -1,18 +1,36 @@
+/* 共通のスタイル */
 body {
     margin: 0;
     padding: 0;
-    height: 200vh; /* 長いページのために高さを設定 */
-    background-image: url('background.jpg'); /* 背景画像の指定 */
+    height: 100vh; 
+    background-image: url('background.jpg'); 
     background-size: cover;
-    background-attachment: fixed; /* 背景を固定 */
+    background-attachment: fixed; 
     background-position: center;
-    position: relative;
+    font-family: sans-serif;
 }
 
 .content {
     text-align: center;
     color: white;
-    padding: 50px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    background-color: transparent;
+    border: none;
+}
+
+button img {
+    width: 100px; /* スマホでも押しやすいサイズ */
 }
 
 .noise {
@@ -22,7 +40,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: url('data:image/png;base64,...') repeat; /* ノイズの画像 */
+    background: url('data:image/png;base64,...') repeat; 
     opacity: 0.2;
     animation: noiseAnimation 0.2s infinite;
 }
@@ -32,4 +50,24 @@ body {
     0% { opacity: 0.1; transform: translate(0, 0); }
     50% { opacity: 0.3; transform: translate(5px, 5px); }
     100% { opacity: 0.1; transform: translate(-5px, -5px); }
+}
+
+/* スマホ向けのメディアクエリ */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .content {
+        padding: 10px;
+    }
 }
